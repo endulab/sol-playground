@@ -1,3 +1,7 @@
+## About
+
+This repository is dedicated to my journey of learning Solidity. It will contain various test projects and experiments where I explore different solutions and smart contract implementations. Here, I test new ideas, experiment with Solidity concepts, and refine my understanding of blockchain development.
+
 ## Foundry
 
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
