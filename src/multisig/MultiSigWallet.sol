@@ -114,12 +114,12 @@ contract MultiSigWallet {
         if (!isTransactionFullyApproved(_transactionId)) {
             revert MultiSigWallet_TransactionNotFullyApproved();
         }
+        transactions[_transactionId].executed = true;
 
         (bool result, ) = transactions[_transactionId].to.call{value: transactions[_transactionId].value }("");
         if (!result) {
             revert MultiSigWallet_TransferFailed();
         }
-        transactions[_transactionId].executed = true;
         emit TransactionExecuted(_transactionId);
     }
 
