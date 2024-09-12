@@ -3,7 +3,7 @@ pragma solidity ^0.8.13;
 
 import {Test} from "forge-std/Test.sol";
 import "forge-std/console.sol";
-import {MultiSigWallet} from "../src/MultiSigWallet.sol";
+import {MultiSigWallet} from "../../src/multisig/MultiSigWallet.sol";
 
 contract MultiSigWalletTest is Test {
     address public addrOwner1 = makeAddr("owner1");
