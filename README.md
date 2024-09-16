@@ -5,6 +5,7 @@ This repository is dedicated to my journey of learning Solidity. It will contain
 Content:
 -   eternal - implementation of Eternal Storage pattern
 -   multisig - multi signature wallet
+-   vault - Vault for ETH, ERC20 and ERC721
 
 ## Foundry
 
