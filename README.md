@@ -6,6 +6,7 @@ Content:
 -   eternal - implementation of Eternal Storage pattern
 -   multisig - multi signature wallet
 -   vault - Vault for ETH, ERC20 and ERC721
+-   proxies - Transparent and UUPS proxies usage
 
 ## Foundry
 
