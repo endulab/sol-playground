@@ -18,8 +18,8 @@ contract Agreements {
     using SafeERC20 for IERC20;
     
     uint256 public agreementBalance;
-    uint256 _startTime;
-    address public erc20Address;
+    uint256 _startTime; // starting time of the agreement setup
+    address public erc20Address; // address is 0 for eth
 
     address immutable public arbitrator;
     address immutable public buyer;
@@ -32,9 +32,9 @@ contract Agreements {
         AgreementCompleted
     }
 
-    AgreementState agreementState;
+    AgreementState agreementState; // keeps current agreement state
 
-    uint constant AGREEMENT_PERIOD = 1 hours;
+    uint256 constant AGREEMENT_PERIOD = 1 hours; // agreement can be completed after the period
 
     event AgreementSetWithETH(address indexed buyer, uint256 amount);
     event AgreementSetWithERC20(address indexed buyer, address indexed erc20Address, uint256 amount);
