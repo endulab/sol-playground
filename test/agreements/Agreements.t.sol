@@ -34,8 +34,8 @@ contract AgreementsTest is Test {
         vm.deal(otherAddr, 5 ether);
 
         erc20 = new TestTokenErc20();
-        erc20.transfer(buyerAddr, 5 ether);
-        erc20.transfer(otherAddr, 5 ether);
+        require(erc20.transfer(buyerAddr, 5 ether));
+        require(erc20.transfer(otherAddr, 5 ether));
 
         agreements = new Agreements(arbitratorAddr, buyerAddr, sellerAddr);
     }

@@ -46,7 +46,7 @@ contract VaultTest is Test {
 
         vm.deal(richAddr, 5 ether);
         erc20 = new TestTokenErc20();
-        erc20.transfer(richAddr, 5 ether);
+        require(erc20.transfer(richAddr, 5 ether));
 
         erc721 = new TestTokenErc721();
         erc721.transferFrom(address(this), richAddr, 0);

@@ -116,7 +116,7 @@ contract Agreements {
         agreementState = AgreementState.AgreementCompleted;
         emit AgreementCompleted();
         
-        _transferEthOrERC20(seller);
+        _transferEthOrErc20(seller);
     }
 
     //! Raises dispute. Only buyer or seller can execute it. Agreement can be resolved only by the arbitrator.
@@ -137,13 +137,13 @@ contract Agreements {
         agreementState = AgreementState.AgreementCompleted;
 
         if (favorBuyer) {
-            _transferEthOrERC20(buyer);
+            _transferEthOrErc20(buyer);
         } else {
-            _transferEthOrERC20(seller);
+            _transferEthOrErc20(seller);
         }
     }
 
-    function _transferEthOrERC20(address to) private {
+    function _transferEthOrErc20(address to) private {
         if (erc20Address != address(0)) {
             IERC20 erc20Contract = IERC20(erc20Address);
             erc20Contract.safeTransfer(to, agreementBalance);
